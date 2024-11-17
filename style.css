@@ -579,9 +579,11 @@ select {
   background-position: center;
 }
 .top_single_section {
+  padding: 20px;
   display: flex;
   align-items: center;
   gap: 20px;
+  border-bottom: 1px solid var(--primary);
 }
 .single_arrow {
   margin-left: 10px;
