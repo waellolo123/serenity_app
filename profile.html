@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Profile</title>
+</head>
+<body>
+  <div class="container">
+    <div class="profileScreen">
+      <div class="profileOverlay"></div>
+      <div class="authTopTexts">
+        <h1 class="authTitle">Profile</h1>
+        <h3 class="authTitleSm">Update Your Profile</h3>
+      </div>
+      <form class="authForm">
+        <div class="inputDiv">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" placeholder="first name">
+        </div>
+        <div class="inputDiv">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" placeholder="last name">
+        </div>
+        <div class="inputDiv genderDiv">
+          <input type="text" placeholder="Gender" class="inputGender">
+          <select name="gender" id="" class="selectProfile">
+            <option value="">Select your gender</option>
+            <option value="">Men</option>
+            <option value="">Women</option>
+          </select>
+        </div>
+        <div class="inputDiv">
+          <i class="fa-solid fa-calendar"></i>
+          <input type="text" placeholder="26-06-1995">
+        </div>
+        <div class="profileImgContainer">
+          <div class="astroImg">
+           <span class="astroImgTitle">Chineese Zodiac</span> 
+           <img src="./assets/dragon.webp" alt="" class="profileImg"> 
+           <span class="astroImgTitle2">Dragon</span> 
+          </div> 
+          <div class="astroImg">
+           <span class="astroImgTitle">Chineese Zodiac</span> 
+           <img src="./assets/singnes.webp" alt="" class="profileImg"> 
+           <span class="astroImgTitle2">Dragon</span> 
+          </div> 
+          <div class="astroImg">
+           <span class="astroImgTitle">Chineese Zodiac</span> 
+           <img src="./assets/symbol.jfif" alt="" class="profileImg"> 
+           <span class="astroImgTitle2">Dragon</span> 
+          </div> 
+          <div class="astroImg">
+           <span class="astroImgTitle">Chineese Zodiac</span> 
+           <img src="./assets/sagitaire.webp" alt="" class="profileImg"> 
+           <span class="astroImgTitle2">Sagitaire</span> 
+          </div> 
+         
+        </div> 
+          <button class="blueButton profileButton"><a href="/register.html">Update your Profile</a></button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,701 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary: #63A8C7;
+  --secondary: lightgray;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1200px;
+  margin: auto;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  z-index: 10;
+}
+i {
+  color: gray;
+  z-index: 10;
+}
+input {
+  margin-left: 5px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: gray;
+  z-index: 10;
+}
+button {
+  cursor: pointer;
+  z-index: 10;
+}
+select {
+  border: none;
+  outline: none;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 100vh;
+}
+/* home screen */
+.screen {
+  background-image: url("./assets/bg.jpg");
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+.inputDiv {
+  width: 100%;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 50px;
+  margin: 5px 0;
+  z-index: 10;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 79, 116);
+  top: 0;
+  left: 0;
+  opacity: .2;
+  z-index: 1;
+}
+.topTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+.title {
+  z-index: 10;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.titleSm {
+  z-index: 10;
+  color: white;
+  letter-spacing: .2rem;
+}
+.buttonsContainer {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+}
+.bottomPhrase {
+  color: gray;
+  text-align: center;
+  margin-top: 10px;
+  font-size: .9rem;
+}
+.bottomSpan {
+  text-decoration: underline;
+  color: #63A8C7;
+}
+.blueButton {
+  background-color: #63A8C7;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  color: white;
+  font-size: 1rem;
+}
+.outlineButton {
+  background-color: white;
+  border: 1px solid gray;
+  outline: none;
+  margin-top: 10px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  color: gray;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.google {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+/* auth screens */
+.authScreen {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(250, 250, 250);
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  position: relative;
+  padding: 10px;
+}
+.authForm {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+.authImgContainer {
+  width: 150px;
+  height: 250px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+.authImg {
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+}
+.authTopTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.authTitle {
+  margin-top: 20px;
+  color: gray;
+  z-index: 10;
+}
+.authTitleSm {
+  color: gray;
+  font-weight: 500;
+  z-index: 10;
+}
+.authButtonsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.checkboxDiv {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #63A8C7;
+}
+.check {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+/* *********  profile screen  ************* */
+.profileScreen {
+  padding: 20px 0;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("./assets/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(250, 250, 250);
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  position: relative;
+}
+.profileOverlay {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.854);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.genderDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+  z-index: 10;
+}
+.selectProfile {
+  position: absolute;
+  right: 10px;
+  color:  #63A8C7;
+  background-color: transparent;
+}
+.inputGender {
+  margin-right: 50px;
+}
+.profileImgContainer {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  z-index: 10;
+}
+.astroImg {
+  width: 130px;
+  height: 170px;
+  padding: 5px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 2px 2px 5px lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+.profileImg {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.astroImgTitle {
+  font-size: 14px;
+  font-weight: semibold;
+  color: gray;
+}
+.astroImgTitle2 {
+  font-size: 14px;
+  font-weight: semibold;
+  color: #63A8C7;
+}
+.profileButton {
+  width: 100%;
+  margin: 10px 0;
+}
+
+/* ************* plans Screen ******************/
+.plans_wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.781), rgb(255, 255, 255)), url('/assets/women_yoga.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.plans_top_section {
+
+}
+.top-buttonsSection {
+  margin: 20px 0 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.timesButtonBlue {
+  width: 100px;
+  background-color: var(--primary);
+  border: none;
+  padding: 5px 20px;
+  border-radius: 30px;
+  color: white;
+}
+.timesButtonOutline {
+  width: 100px;
+  background-color: white;
+  border: 1px solid var(--primary);
+  padding: 5px 20px;
+  border-radius: 30px;
+  color: var(--primary);
+}
+.timesButtons {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.plansButton {
+  padding: 15px;
+  border: 1px solid #63A8C7;
+  background-color: transparent;
+  border-radius: 50px;
+  color: #63A8C7;
+}
+.plans_bottom_section {
+  margin-top: 50px;
+  padding: 60px 30px;
+  border-radius: 20px 20px 0 0 ;
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+}
+.arrows {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+.arrows_icons {
+  color: white;
+  font-size: 50px;
+}
+.plans_texts_wrapper {
+  width: 80%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.plans_title {
+  color: var(--primary);
+}
+.plans_titleSm {
+  margin: 10px 0 20px 0;
+  color: var(--primary);
+}
+.plans_list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.plans_item {
+  color: gray;
+}
+/* *************** */
+.methods_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.methods_title {
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+.method_img {
+  width: 90%;
+  height: 300px;
+  margin: auto;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.all_methods {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.method_section {
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  height: 120px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 2px 2px 5px lightgray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.method_section_img {
+  width: 80px;
+}
+.method_section_title {
+  color: var(--primary);
+}
+.method_section_titleSm {
+  margin-top: 5px;
+  color: gray;
+}
+
+/* ************* home  */
+.home_wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.877), rgba(255, 255, 255, 0.89)), url('/assets/yoga1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.user_section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--primary);
+  padding: 20px;
+}
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+.user_greeting {
+  color: var(--primary);
+}
+.user_name {
+  color: gray;
+}
+.subscribe_infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.subscribe_title {
+  color: var(--primary);
+  font-size: 1rem;
+}
+.subscribe_dates {
+  background-color: var(--primary);
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.subscribe_date {
+  color: white;
+  font-size: .8rem;
+}
+.exercises_section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 30px;
+}
+.exercise_section {
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 2px 10px lightgray;
+}
+.exercise_section img {
+  width: 100px;
+  border: 10px;
+  border-radius: 15px;
+}
+.exercise_texts {
+  margin-left: 10px;
+}
+.exercise_title {
+  color: var(--primary);
+}
+.exercise_text {
+  color: gray;
+  font-size: .8rem;
+}
+.exercise_video_icon {
+  background-color: var(--primary);
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.exercise_icon {
+  color: white;
+  font-size: 1.5rem;
+}
+.tabbar_section {
+  background-color: var(--primary);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.tabbar_icon_white {
+  font-size: 2rem;
+  color: white;
+}
+.tabbar_icon_blue {
+  font-size: 2rem;
+  color: #2b7da0;
+}
+
+/* ****************** single exercise*/
+.single_wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.877), rgba(255, 255, 255, 0.89)), url('/assets/yoga1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.top_single_section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.single_arrow {
+  margin-left: 10px;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+.single_title {
+  text-align: center;
+  color: var(--primary);
+}
+.single_text {
+  color: gray;
+  width: 90%;
+  margin: auto;
+  line-height: 1.5rem;
+  margin-top: 30px;
+}
+.single_play {
+  margin-top: 30px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.single_icon {
+  font-size: 2rem;
+  color: white;
+  background-color: var(--primary);
+  padding: 10px;
+  border-radius: 100%;
+}
+.single_lines {
+  display: flex;
+  align-items: center;
+}
+.single_dot{
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary);
+  border-radius: 100%;
+}
+.single_line {
+  width: 250px;
+  height: 10px;
+  background-color: rgb(163, 163, 163);
+  border-radius: 5px;
+}
+.single_img_container {
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.single_img {
+  width: 90%;
+  margin: auto;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px lightgray;
+}
+/* ********************** validation */
+.validation_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.877), rgba(255, 255, 255, 0.89)), url('/assets/women_yoga.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.validation_wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.validation_form {
+  margin: 30px 0;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.validation_box {
+  display: flex;
+  align-items: center;
+  gap: 5;
+  width: 300px;
+}
+.validation_label {
+  color: var(--primary);
+  font-weight: bold;
+}
+.validation_label {
+  margin-left: 10px;
+}
+.validation_input {
+  border: var(--primary);
+}
+.validation_button {
+  margin-top: 30px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  width: 300px;
+  border-radius: 50px;
+}
+
+
+
